@@ -1,0 +1,45 @@
+{use_macro file="Dataface_Main_Template.html"}
+    {fill_slot name="html_body"}
+    
+        <h1>UITK Demo</h1>
+        
+        <div id="uitable-demo">
+            <div id="uitable-config">
+                <label for="uitable-tablename">Table:</label><input type="text" id="uitable-tablename"/>
+                <label for="uitable-columns">Columns:</label><input type="text" id="uitable-columns"/>
+            </div> 
+            
+            <div id="uitable-wrapper">
+            
+            </div>
+        </div>
+        <table>
+            <tr>
+                <td valign="top">
+                    <div id="profiles-table-wrapper">
+                        <h1>Profiles</h1>
+                        <input id="profile-search" type="text"/>
+                    </div>
+                </td>
+                <td valign="top">
+                    <div id="careers-table-wrapper">
+                        <h1>Career History</h1>
+                        <input id="career-search" type="text"/>
+                     </div>
+                </td>
+                <td valign="top">
+                    <div id="uitk-form-wrapper"></div>
+                </td>
+            </tr>
+        </table>
+        
+        <hr/>
+        
+        <h1>UITableBuilder Demo</h1>
+        
+        <div id="uitk_uitable_builder_wrapper">
+            
+        </div>
+        
+    {/fill_slot}
+{/use_macro}
