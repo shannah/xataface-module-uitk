@@ -95,7 +95,8 @@
             getValue : getValue,
             getValues : getValues,
             setValue : setValue,
-            setValues : setValues
+            setValues : setValues,
+            getRecordId : getRecordId
         });
         
         /**
@@ -256,6 +257,19 @@
          */
         function stopObservingTable(/*UITable*/ table){
             $(table.model).unbind('selectionChanged.UIForm.'+this.formId);
+        }
+        
+        /**
+         * @function
+         * @memberOf xataface.modules.uitk.components.UIForm#
+         * 
+         * @returns {String} The record ID of the record that is currently 
+         *  the subject of this form.
+         */
+        function getRecordId(){
+            return $(this.el.contentWindow.document)
+                    .find('table.xf-form-group[data-xf-record-id]')
+                        .attr('data-xf-record-id');
         }
         
         /**
